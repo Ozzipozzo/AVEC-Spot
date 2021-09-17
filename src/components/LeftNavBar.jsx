@@ -2,19 +2,24 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Container = styled.div`
-    display: flex;
-    justify-content: column;
-    width: 20%;
+const LeftNavBarStyle = styled.div`
+    width: 10%;
     height: 100vh;
+    float: left;
+    .main_nav {
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 export default function LeftNavBar() {
     return (
-        <Container>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/artists">Artists</NavLink>
-        </Container>
+        <LeftNavBarStyle>
+            <nav className="main_nav">
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/artists">Artists</NavLink>
+            </nav>
+        </LeftNavBarStyle>
     )
 }
 
