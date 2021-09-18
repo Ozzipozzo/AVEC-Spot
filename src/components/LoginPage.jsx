@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { useHistory } from 'react-router';
+import { useCookies } from 'react-cookie';
 
 
 export default function LoginPage() {
 
-    let history = useHistory();
+    const [cookies, setCookie] = useCookies(['token']);
 
     let decoded = new URL(window.location.href);
     let code = decoded.searchParams.get('code')
@@ -40,15 +41,21 @@ export default function LoginPage() {
             .then(response => response.json())
             .then(res => {
                 console.log(res)
-                window.localStorage.setItem('token', res.access_token);
-                window.localStorage.setItem('refreshtoken', res.refresh_token);
-                history.push('/');
+                setCookie('token', res.access_token, { path: '/'})
             })
     }, [])
 
-    return (
-        <div>
-            <a href="https://accounts.spotify.com/authorize?client_id=d85447faf99a46b0bdb05147d09e1f88&response_type=code&redirect_uri=http://localhost:3000/login&scope=user-read-private%20user-read-email&state=avecspot">se connecter</a>
-        </div>
-    )
+    console.log(cookies)
+    if(cookies.token === 'undefined') {
+        return (
+            <div>
+                <a href="https://accounts.spotify.com/authorize?client_id=d85447faf99a46b0bdb05147d09e1f88&response_type=code&redirect_uri=http://localhost:3000/login&scope=user-read-private%20user-read-email&state=avecspot">se connecter</a>
+            </div>
+        )
+    } else {
+        return (
+            <div>Vous êtes connecté, cliquez sur Home</div>
+        )
+    }
+    
 }

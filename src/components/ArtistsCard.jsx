@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ArtistsCardStyle = styled.div`
@@ -21,11 +22,21 @@ const ArtistsCardStyle = styled.div`
     }
 `;
 
-export default function Artists() {
+export default function Artists(props) {
+
+    let history = useHistory();
+
+    const handleId = (id) => {
+        history.push(`artist_detail/${id}`)
+    }
+
     return (
         <ArtistsCardStyle>
             <div className="artist_card_main">
-                
+                <img src={props.img} alt={props.name} />
+                <p>{props.name}</p>
+                <p>{props.followers}</p>
+                <button onClick={() => handleId(props.id)}>go to artists</button>
             </div>
         </ArtistsCardStyle>
     )
