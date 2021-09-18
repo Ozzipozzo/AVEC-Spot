@@ -42,12 +42,9 @@ export default function LoginPage() {
                 console.log(res)
                 window.localStorage.setItem('token', res.access_token);
                 window.localStorage.setItem('refreshtoken', res.refresh_token);
-                history.push('/')
+                history.push('/');
             })
     }, [])
-    
-    
-    
 
     return (
         <div>

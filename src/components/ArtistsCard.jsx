@@ -25,7 +25,7 @@ export default function Artists() {
     return (
         <ArtistsCardStyle>
             <div className="artist_card_main">
-                <h1>hello</h1>
+                
             </div>
         </ArtistsCardStyle>
     )
