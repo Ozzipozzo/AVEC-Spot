@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const LeftNavBarStyle = styled.div`
-    width: 10%;
+    width: 15%;
     height: 100vh;
     float: left;
     .main_nav {
@@ -17,7 +17,6 @@ export default function LeftNavBar() {
         <LeftNavBarStyle>
             <nav className="main_nav">
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/artists">Artists</NavLink>
             </nav>
         </LeftNavBarStyle>
     )

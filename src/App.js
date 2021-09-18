@@ -1,9 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Artists from './components/ArtistsCard'
+import ArtistDetail from './components/ArtistDetail'
 import LeftNavBar from './components/LeftNavBar';
 import LoginPage from './components/LoginPage';
+import AlbumTracks from './components/AlbumTracks';
 
 
 function App() {
@@ -12,8 +13,11 @@ function App() {
     <Router>
     <LeftNavBar/>
         <Switch>
-          <Route path="/artists">
-            <Artists/>
+          <Route path="/artist_detail/:id">
+            <ArtistDetail/>
+          </Route>
+          <Route path="/album_detail/:id">
+            <AlbumTracks/>
           </Route>
           <Route path="/login">
             <LoginPage/>

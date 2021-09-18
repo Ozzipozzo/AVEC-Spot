@@ -21,22 +21,20 @@ const ArtistsCardStyle = styled.div`
         }
     }
 `;
-
-export default function Artists(props) {
-
+export default function AlbumsCard(props) {
     let history = useHistory();
 
     const handleId = (id) => {
-        history.push(`artist_detail/${id}`)
+        history.push(`/album_detail/${id}`)
     }
-
     return (
         <ArtistsCardStyle>
-            <div className="artist_card_main">
+            <div className="album_card_main">
                 <Link to="#" onClick={() => handleId(props.id)}>
                     <img src={props.img} alt={props.name} />
                     <p>{props.name}</p>
-                    <p>{props.followers}</p>
+                    <p>{props.release_date}</p>
+                    <p>{props.total_tracks}</p>
                 </Link>
             </div>
         </ArtistsCardStyle>
