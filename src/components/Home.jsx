@@ -34,7 +34,7 @@ export default function Home() {
         return (
             <div>
                 <Login/>
-                <div>En cours de chargement...</div>
+                <div>Veuillez vous connecter pour accèder aux artistes..</div>
             </div>
         )
     } else {
