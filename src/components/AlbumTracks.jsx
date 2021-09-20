@@ -16,6 +16,7 @@ export default function AlbumTracks() {
     const [tracks, setTracks] = useState(null)
     const [ play, setPlay ] = useState(false)
     const format = 'mp3';
+    const html5 = true
 
     useEffect(() => {
         fetch(`https://api.spotify.com/v1/albums/${id}/tracks`, {
@@ -47,15 +48,14 @@ export default function AlbumTracks() {
                 return (
                    <div key={index}>
                        <ul>
-                       <button onClick={() => setPlay(!play)}>
-                            { play ? 'Pause' : 'Play' }
-                        </button>
                            <li>{track.name}</li>
-                            <ReactHowler
+                           <audio src={track.preview_url} controls></audio>
+                            {/* <ReactHowler
                                src={[track.preview_url]}
-                               playing={play}
+                               playing={false}
                                format={[format]}
-                            />
+                               html5={html5}
+                            /> */}
                        </ul>
                    </div>
                 )
