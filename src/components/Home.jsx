@@ -33,12 +33,9 @@ export default function Home() {
         })
         .then(res => res.json())
         .then(res => {
-            console.log(res)
             setArtists(res.artists)
         })
     }, [])
-
-    console.log(artists);
 
     if(!artists) {
         return (

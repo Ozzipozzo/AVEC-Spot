@@ -37,14 +37,12 @@ export default function Login() {
         })
         .then(res => res.json())
         .then(res => {
-            console.log(res)
             setIsLoggedIn(res.id)
         })
     }, [])
 
     const logout = () => {
         removeCookie('token');
-        console.log(cookies);
         window.location.reload(false);
     }
 

@@ -28,7 +28,6 @@ export default function ArtistDetail() {
         })
         .then(res => res.json())
         .then(res => {
-            console.log(res)
             setAlbums(res.items)
         })
     }, [])

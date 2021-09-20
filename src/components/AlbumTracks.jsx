@@ -58,9 +58,6 @@ export default function AlbumTracks() {
         })
     }, [])
 
-    
-    console.log(tracks)
-
     if(!tracks) {
         return (
             <div> En cours de chargement ...</div>

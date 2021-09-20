@@ -34,10 +34,11 @@ export default function LoginPage() {
             'grant_type': "authorization_code",
             'code': code,
             'redirect_uri': 'http://localhost:3000/login',
-            'client_id': 'd85447faf99a46b0bdb05147d09e1f88',
-            'client_secret': 'b0c0fb31bb8c4e0f99793e8c43c0eb1a'
+            'client_id': process.env.REACT_APP_CLIENT_ID,
+            'client_secret': process.env.REACT_APP_CLIENT_SECRET
         }
     
+
         var formBody = [];
         for (var property in data) {
         var encodedKey = encodeURIComponent(property);
@@ -56,13 +57,11 @@ export default function LoginPage() {
             })
             .then(response => response.json())
             .then(res => {
-                console.log(res)
                 setCookie('token', res.access_token, { path: '/'})
             })
 
     }, [])
 
-    console.log(cookies)
     if(cookies.token === 'undefined') {
         return (
             <LoginPageStyle>
