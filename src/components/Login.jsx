@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
-import { useEffect } from 'react';
-import { useState } from 'react';
 
 const LoginStyle = styled.div`
 
@@ -25,8 +23,9 @@ const LoginStyle = styled.div`
 
 export default function Login() {
 
+    const [cookies, setCookies, removeCookie] = useCookies(["token"]);
     const tokentest = useCookies()[0].token;
-
+    let history = useHistory();
     const [isLoggedIn, setIsLoggedIn] = useState(null);
 
     useEffect(() => {
@@ -43,15 +42,18 @@ export default function Login() {
         })
     }, [])
 
-
-    console.log(isLoggedIn);
+    const logout = () => {
+        removeCookie('token');
+        console.log(cookies);
+        window.location.reload(false);
+    }
 
     return (
         <LoginStyle>
             <div className="main_login">
                 {
                     isLoggedIn 
-                    ? <Link tp="#">{isLoggedIn}</Link>
+                    ? <button onClick={logout}>{isLoggedIn}</button>
                     : <Link to="/login">Se connecter</Link>
                 }
             </div>

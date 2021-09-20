@@ -1,6 +1,22 @@
 import React, { useEffect } from 'react'
 import { useHistory } from 'react-router';
 import { useCookies } from 'react-cookie';
+import styled from 'styled-components';
+
+const LoginPageStyle = styled.div `
+    display: flex;
+    justify-content: center;
+    
+    a {
+        text-decoration: none;
+        color: white;
+        margin-top: 2rem;
+    }
+    .connect_ok {
+        margin-top: 2rem;
+        color: white;
+    }
+`;
 
 
 export default function LoginPage() {
@@ -43,19 +59,21 @@ export default function LoginPage() {
                 console.log(res)
                 setCookie('token', res.access_token, { path: '/'})
             })
-            
+
     }, [])
 
     console.log(cookies)
     if(cookies.token === 'undefined') {
         return (
-            <div>
-                <a href="https://accounts.spotify.com/authorize?client_id=d85447faf99a46b0bdb05147d09e1f88&response_type=code&redirect_uri=http://localhost:3000/login&scope=user-read-private%20user-read-email&state=avecspot">se connecter</a>
-            </div>
+            <LoginPageStyle>
+                <a href="https://accounts.spotify.com/authorize?client_id=d85447faf99a46b0bdb05147d09e1f88&response_type=code&redirect_uri=http://localhost:3000/login&scope=user-read-private%20user-read-email&state=avecspot">Se connecter</a>
+            </LoginPageStyle>
         )
     } else {
         return (
-            <div>Vous êtes connecté, cliquez sur Home</div>
+            <LoginPageStyle>
+                <p className="connect_ok">Vous êtes connecté, cliquez sur Home</p>
+            </LoginPageStyle>
         )
     }
     

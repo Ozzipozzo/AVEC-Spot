@@ -9,6 +9,14 @@ const HomeStyle = styled.div`
     flex-wrap: wrap;
     background-color: #1b1919;
     padding-left: 4rem;
+
+    .main_connect {
+    }
+    .main_connect_p {
+        color: white;
+
+    }
+    
 `;
 export default function Home() {
 
@@ -34,10 +42,12 @@ export default function Home() {
 
     if(!artists) {
         return (
-            <div>
+            <HomeStyle>
                 <Login/>
-                <div>Veuillez vous connecter pour accèder aux artistes..</div>
-            </div>
+                <div className="main_connect">
+                    <p className="main_connect_p">Veuillez vous connecter pour accèder aux artistes..</p>
+                    </div>
+            </HomeStyle>
         )
     } else {
         return (
