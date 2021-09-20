@@ -7,6 +7,8 @@ import { useCookies } from 'react-cookie';
 const HomeStyle = styled.div`
     display: flex;
     flex-wrap: wrap;
+    background-color: #1b1919;
+    padding-left: 4rem;
 `;
 export default function Home() {
 

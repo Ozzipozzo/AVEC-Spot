@@ -43,6 +43,7 @@ export default function LoginPage() {
                 console.log(res)
                 setCookie('token', res.access_token, { path: '/'})
             })
+            
     }, [])
 
     console.log(cookies)
