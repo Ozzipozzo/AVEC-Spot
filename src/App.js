@@ -12,6 +12,7 @@ function App() {
   return (
     <>
     <Router>
+      <LeftNavBar/>
         <Switch>
           <Route path="/artist_detail/:id">
             <ArtistDetail/>

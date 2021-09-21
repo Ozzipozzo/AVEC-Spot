@@ -3,15 +3,22 @@ import { useParams } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import AlbumsCard from './AlbumsCard';
 import styled from 'styled-components';
+import LeftNavBar from './LeftNavBar';
 
 const ArtistDetailStyle = styled.div`
 
     display: flex;
-    flex-wrap: wrap;
     background-color: #1b1919;
-    padding-left: 4rem;
-    padding-top: 3rem;
-    
+
+    .artist_detail_container {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 8rem;
+        padding-top: 3rem;
+        overflow-y: auto;
+
+    }
+
 `;
 
 export default function ArtistDetail() {
@@ -41,21 +48,24 @@ export default function ArtistDetail() {
     } else {
         return (
             <ArtistDetailStyle>
-                {
-                    albums.map((album, index) => {
-                        return (
-                            <AlbumsCard
-                            key={index}
-                            img={album.images[1].url}
-                            alt={album.name}
-                            name={album.name}
-                            release_date={album.release_date}
-                            total_tracks={album.total_tracks}
-                            id={album.id}
-                            />
-                        )
-                    })
-                }
+                <LeftNavBar />
+                <div className="artist_detail_container">
+                    {
+                        albums.map((album, index) => {
+                            return (
+                                <AlbumsCard
+                                key={index}
+                                img={album.images[1].url}
+                                alt={album.name}
+                                name={album.name}
+                                release_date={album.release_date}
+                                total_tracks={album.total_tracks}
+                                id={album.id}
+                                />
+                            )
+                        })
+                    }
+                </div>
             </ArtistDetailStyle>
         )
     }

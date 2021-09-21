@@ -4,12 +4,13 @@ import styled from 'styled-components';
 
 const ArtistsCardStyle = styled.div`
 
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-right: 2rem;
+    overflow-y: auto;
     
     .album_card_main {
         border-radius: 10px 10px 10px 10px;
