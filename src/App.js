@@ -5,13 +5,13 @@ import ArtistDetail from './components/ArtistDetail'
 import LeftNavBar from './components/LeftNavBar';
 import LoginPage from './components/LoginPage';
 import AlbumTracks from './components/AlbumTracks';
+import Login from './components/Login';
 
 
 function App() {
   return (
     <>
     <Router>
-    <LeftNavBar/>
         <Switch>
           <Route path="/artist_detail/:id">
             <ArtistDetail/>

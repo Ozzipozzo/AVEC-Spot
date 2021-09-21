@@ -2,12 +2,9 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link, useHistory } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import LeftNavBar from './LeftNavBar';
 
 const LoginStyle = styled.div`
-
-    display: flex;
-    justify-content: flex-end;
-    width: 88%;
 
     .main_login {
         margin-top: 3rem;

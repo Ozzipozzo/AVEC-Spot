@@ -5,9 +5,6 @@ import styled from 'styled-components';
 const ArtistsCardStyle = styled.div`
 
     margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin-right: 2rem;
     

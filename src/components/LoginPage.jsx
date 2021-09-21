@@ -2,12 +2,18 @@ import React, { useEffect } from 'react'
 import { useHistory } from 'react-router';
 import { useCookies } from 'react-cookie';
 import styled from 'styled-components';
+import LeftNavBar from './LeftNavBar';
 
 const LoginPageStyle = styled.div `
+   
     display: flex;
-    justify-content: center;
-    background-color: black;
-    
+
+   .main_container {
+       background-color: black;
+       width: 100%;
+       display: flex;
+        justify-content: center;
+   }
     a {
         text-decoration: none;
         color: white;
@@ -24,6 +30,7 @@ const LoginPageStyle = styled.div `
         margin: 0.5em;
         margin-top: 2rem;
         padding: 1em 2em;
+        height: 2%;
 
         &:hover,
         &:focus { 
@@ -37,9 +44,19 @@ const LoginPageStyle = styled.div `
         box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
         transform: translateY(-0.25em);
     }
+
+    .main_connect {
+        background-color: black;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     .connect_ok {
         margin-top: 2rem;
         color: white;
+        font-size: xx-large;
+        margin-top: 4rem;
     }
 `;
 
@@ -90,13 +107,19 @@ export default function LoginPage() {
     if(cookies.token === 'undefined') {
         return (
             <LoginPageStyle>
-                <a href="https://accounts.spotify.com/authorize?client_id=d85447faf99a46b0bdb05147d09e1f88&response_type=code&redirect_uri=http://localhost:3000/login&scope=user-read-private%20user-read-email&state=avecspot">Se connecter</a>
+                <LeftNavBar />
+                <div className="main_container">
+                    <a href="https://accounts.spotify.com/authorize?client_id=d85447faf99a46b0bdb05147d09e1f88&response_type=code&redirect_uri=http://localhost:3000/login&scope=user-read-private%20user-read-email&state=avecspot">Se connecter</a>
+                </div>
             </LoginPageStyle>
         )
     } else {
         return (
             <LoginPageStyle>
-                <p className="connect_ok">Vous êtes connecté, cliquez sur Home</p>
+                <LeftNavBar />
+                <div className="main_connect">
+                    <p className="connect_ok">Vous êtes connecté, cliquez sur Home</p>
+                </div>
             </LoginPageStyle>
         )
     }

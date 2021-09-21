@@ -5,11 +5,13 @@ import AlbumsCard from './AlbumsCard';
 import styled from 'styled-components';
 
 const ArtistDetailStyle = styled.div`
+
     display: flex;
     flex-wrap: wrap;
     background-color: #1b1919;
     padding-left: 4rem;
     padding-top: 3rem;
+    
 `;
 
 export default function ArtistDetail() {
@@ -54,7 +56,6 @@ export default function ArtistDetail() {
                         )
                     })
                 }
-                
             </ArtistDetailStyle>
         )
     }
