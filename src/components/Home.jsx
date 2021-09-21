@@ -9,12 +9,10 @@ const HomeStyle = styled.div`
     flex-wrap: wrap;
     background-color: #1b1919;
     padding-left: 4rem;
-
-    .main_connect {
-    }
+    height: 100vh;
+    
     .main_connect_p {
         color: white;
-
     }
     
 `;

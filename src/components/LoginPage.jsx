@@ -6,11 +6,36 @@ import styled from 'styled-components';
 const LoginPageStyle = styled.div `
     display: flex;
     justify-content: center;
+    background-color: black;
     
     a {
         text-decoration: none;
         color: white;
         margin-top: 2rem;
+        margin-top: 1rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        color: #1ED760;
+        transition: 0.25s;
+        background: none;
+        border: 2px solid;
+        font: inherit;
+        line-height: 1;
+        margin: 0.5em;
+        margin-top: 2rem;
+        padding: 1em 2em;
+
+        &:hover,
+        &:focus { 
+        border-color: #1ED760;
+        color: #fff;
+        }
+    }
+
+    .a:hover,
+    .a:focus {
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-0.25em);
     }
     .connect_ok {
         margin-top: 2rem;
