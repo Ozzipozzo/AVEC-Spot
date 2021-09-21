@@ -8,7 +8,8 @@ import LeftNavBar from './LeftNavBar';
 const TracksDetailStyle = styled.div`
 
 display: flex;
-width: 87%;
+width: 100%;
+margin-left: 13rem;
 
 .main_tracks_container {
         color: white;
@@ -16,13 +17,11 @@ width: 87%;
         justify-content: center;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-right: 2rem;
         background-color: #1B1919;
 
     }
 
     .main_banner {
-        z-index:0;
         height: 325px;
     }
     .gradient_banner {

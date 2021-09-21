@@ -10,6 +10,7 @@ const ArtistDetailStyle = styled.div`
     display: flex;
     background-color: #1b1919;
     width: 100%;
+    margin-left: 13rem;
 
     .artist_detail_container {
         display: flex;

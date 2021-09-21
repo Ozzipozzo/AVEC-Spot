@@ -10,7 +10,6 @@ const ArtistsCardStyle = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     margin-right: 2rem;
-    overflow-y: auto;
     
     .album_card_main {
         border-radius: 10px 10px 10px 10px;
@@ -28,6 +27,9 @@ const ArtistsCardStyle = styled.div`
         .smooth {
             color: grey;
         }
+        .title {
+            font-weight: bold;
+        }
     }
 `;
 export default function AlbumsCard(props) {
@@ -41,7 +43,7 @@ export default function AlbumsCard(props) {
             <div className="album_card_main">
                 <Link to="#" onClick={() => handleId(props.id)}>
                     <img src={props.img} alt={props.name} />
-                    <p>{props.name}</p>
+                    <p className="title">{props.name}</p>
                     <p className="smooth">Date de sortie : {props.release_date}</p>
                     <p className="smooth">Nombres de tracks : {props.total_tracks}</p>
                 </Link>

@@ -9,11 +9,17 @@ const HomeStyle = styled.div`
     display: flex;
     background-color: #1b1919;
     width: 100%;
+    margin-left: 13rem;
 
     .main_connect {
         margin: 0 auto;
         color: white;
         font-size: xx-large;
+        height: 100vh;
+    }
+
+    .main_connect_p {
+        margin-top: 6rem;
     }
     
     .artist_card_container {

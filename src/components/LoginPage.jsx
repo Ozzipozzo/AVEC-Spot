@@ -10,11 +10,14 @@ const LoginPageStyle = styled.div `
     width: 100%;
 
    .main_container {
-       background-color: black;
-       width: 100%;
-       display: flex;
+        background-color: black;
+        width: 100%;
+        display: flex;
         justify-content: center;
-   }
+        margin-left: 13rem;
+        height: 100vh;
+    }
+
     a {
         text-decoration: none;
         color: white;
@@ -29,7 +32,7 @@ const LoginPageStyle = styled.div `
         font: inherit;
         line-height: 1;
         margin: 0.5em;
-        margin-top: 2rem;
+        margin-top: 6rem;
         padding: 1em 2em;
         height: 2%;
 
@@ -51,13 +54,14 @@ const LoginPageStyle = styled.div `
         width: 100%;
         display: flex;
         justify-content: center;
+        height: 100vh;
     }
 
     .connect_ok {
         margin-top: 2rem;
         color: white;
         font-size: xx-large;
-        margin-top: 4rem;
+        margin-top: 8rem;
     }
 `;
 

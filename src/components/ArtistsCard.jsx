@@ -24,6 +24,9 @@ const ArtistsCardStyle = styled.div`
         .artist_follower {
             color: grey;
         }
+        .artist_title {
+            font-weight: bold;
+        }
     }
 `;
 
@@ -40,7 +43,7 @@ export default function Artists(props) {
             <div className="artist_card_main">
                 <Link to="#" onClick={() => handleId(props.id)}>
                     <img src={props.img} alt={props.name} />
-                    <p>{props.name}</p>
+                    <p className="artist_title">{props.name}</p>
                     <p className="artist_follower">Followers : {props.followers}</p>
                 </Link>
             </div>

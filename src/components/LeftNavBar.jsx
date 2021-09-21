@@ -9,6 +9,7 @@ const LeftNavBarStyle = styled.div`
     background-color: #332f2f;
     height: 100vh;
     width: 12%;
+    position: fixed;
 
     .main_nav {
         width: 94%;
