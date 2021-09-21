@@ -8,6 +8,7 @@ import LeftNavBar from './LeftNavBar';
 const HomeStyle = styled.div`
     display: flex;
     background-color: #1b1919;
+    width: 100%;
 
     .main_connect {
         margin: 0 auto;
@@ -49,7 +50,7 @@ export default function Home() {
     if(!artists) {
         return (
             <HomeStyle>
-                <LeftNavBar />
+              
                 <div className="main_connect">
                     <p className="main_connect_p">Veuillez vous connecter pour accèder aux artistes..</p>
                 </div>
@@ -58,7 +59,6 @@ export default function Home() {
     } else {
         return (
             <HomeStyle>
-                <LeftNavBar />
                     <div className="artist_card_container">
                         {artists.map((artist, index) => {
                             return (

@@ -9,6 +9,7 @@ const ArtistDetailStyle = styled.div`
 
     display: flex;
     background-color: #1b1919;
+    width: 100%;
 
     .artist_detail_container {
         display: flex;
@@ -16,6 +17,7 @@ const ArtistDetailStyle = styled.div`
         padding-left: 8rem;
         padding-top: 3rem;
         overflow-y: auto;
+        width: 94%;
 
     }
 
@@ -48,7 +50,6 @@ export default function ArtistDetail() {
     } else {
         return (
             <ArtistDetailStyle>
-                <LeftNavBar />
                 <div className="artist_detail_container">
                     {
                         albums.map((album, index) => {

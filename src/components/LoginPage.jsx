@@ -7,6 +7,7 @@ import LeftNavBar from './LeftNavBar';
 const LoginPageStyle = styled.div `
    
     display: flex;
+    width: 100%;
 
    .main_container {
        background-color: black;
@@ -107,7 +108,6 @@ export default function LoginPage() {
     if(cookies.token === 'undefined') {
         return (
             <LoginPageStyle>
-                <LeftNavBar />
                 <div className="main_container">
                     <a href="https://accounts.spotify.com/authorize?client_id=d85447faf99a46b0bdb05147d09e1f88&response_type=code&redirect_uri=http://localhost:3000/login&scope=user-read-private%20user-read-email&state=avecspot">Se connecter</a>
                 </div>
@@ -116,7 +116,6 @@ export default function LoginPage() {
     } else {
         return (
             <LoginPageStyle>
-                <LeftNavBar />
                 <div className="main_connect">
                     <p className="connect_ok">Vous êtes connecté, cliquez sur Home</p>
                 </div>

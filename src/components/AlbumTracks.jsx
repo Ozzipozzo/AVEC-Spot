@@ -8,6 +8,7 @@ import LeftNavBar from './LeftNavBar';
 const TracksDetailStyle = styled.div`
 
 display: flex;
+width: 87%;
 
 .main_tracks_container {
         color: white;
@@ -72,7 +73,6 @@ export default function AlbumTracks() {
     } else {
         return (
             <TracksDetailStyle>
-                <LeftNavBar />
                 <div className="main_tracks_container">
                     <div className="main_banner">
                         <img className="gradient_banner" src={Gradient} alt="" />
