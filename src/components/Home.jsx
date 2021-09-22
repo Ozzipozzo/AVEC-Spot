@@ -39,7 +39,7 @@ const HomeStyle = styled.div`
         border-bottom: 1px solid white;
         margin-left: 6rem;
         width: 84%;
-        padding-top: 2rem;
+        padding-top: 0.7rem;    
     }
     h2 {
         font-size: 50px;
