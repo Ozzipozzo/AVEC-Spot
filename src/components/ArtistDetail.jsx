@@ -7,7 +7,6 @@ import LeftNavBar from './LeftNavBar';
 
 const ArtistDetailStyle = styled.div`
 
-    display: flex;
     background-color: #1b1919;
     width: 100%;
     margin-left: 13rem;
@@ -15,12 +14,21 @@ const ArtistDetailStyle = styled.div`
     .artist_detail_container {
         display: flex;
         flex-wrap: wrap;
-        padding-left: 8rem;
-        padding-top: 3rem;
+        padding-left: 6rem;
         overflow-y: auto;
         width: 94%;
+        margin-top: 2rem;
 
     }
+    .page_title {
+        color: white;
+        margin-left: 13rem;
+        border-bottom: 1px solid white;
+        margin-left: 6rem;
+        width: 84%;
+        padding-top: 2rem;
+    }
+
 
 `;
 
@@ -51,6 +59,9 @@ export default function ArtistDetail() {
     } else {
         return (
             <ArtistDetailStyle>
+                <div className="page_title">
+                    <h2>ALBUMS</h2>
+                </div>
                 <div className="artist_detail_container">
                     {
                         albums.map((album, index) => {

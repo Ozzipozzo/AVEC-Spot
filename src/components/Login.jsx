@@ -83,6 +83,8 @@ export default function Login() {
             })
     }, [])
 
+    console.log(isLoggedIn)
+
     const logout = () => {
         removeCookie('token');
         window.location.reload(false);
@@ -92,7 +94,7 @@ export default function Login() {
         <LoginStyle>
             <div className="main_login">
                 {
-                    isLoggedIn
+                        isLoggedIn
                         ? <button className="logout_button" onClick={logout}>{isLoggedIn}</button>
                         : <Link className="login_button" to="/login">Se connecter</Link>
                 }

@@ -22,6 +22,7 @@ const LeftNavBarStyle = styled.div`
         padding-top: 2rem;
         text-decoration: none;
         color: white;
+        font-size: 20px;
     }
 `;
 

@@ -113,7 +113,7 @@ export default function LoginPage() {
         return (
             <LoginPageStyle>
                 <div className="main_container">
-                    <a href="https://accounts.spotify.com/authorize?client_id=d85447faf99a46b0bdb05147d09e1f88&response_type=code&redirect_uri=http://localhost:3000/login&scope=user-read-private%20user-read-email&state=avecspot">Se connecter</a>
+                    <a href="https://accounts.spotify.com/authorize?client_id=d85447faf99a46b0bdb05147d09e1f88&response_type=code&redirect_uri=http://localhost:3000/login&scope=user-read-private%20user-read-email&state=avecspot">Se connecter via spotify </a>
                 </div>
             </LoginPageStyle>
         )

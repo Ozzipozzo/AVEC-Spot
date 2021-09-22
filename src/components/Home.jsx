@@ -6,7 +6,7 @@ import { useCookies } from 'react-cookie';
 import LeftNavBar from './LeftNavBar';
 
 const HomeStyle = styled.div`
-    display: flex;
+    /* display: flex; */
     background-color: #1b1919;
     width: 100%;
     margin-left: 13rem;
@@ -32,6 +32,15 @@ const HomeStyle = styled.div`
     .main_login_home {
         width: 10%;
     }
+
+    .page_title {
+        color: white;
+        margin-left: 13rem;
+        border-bottom: 1px solid white;
+        margin-left: 6rem;
+        width: 84%;
+        padding-top: 2rem;
+    }
     
 `;
 export default function Home() {
@@ -56,7 +65,6 @@ export default function Home() {
     if(!artists) {
         return (
             <HomeStyle>
-              
                 <div className="main_connect">
                     <p className="main_connect_p">Veuillez vous connecter pour accèder aux artistes..</p>
                 </div>
@@ -65,6 +73,9 @@ export default function Home() {
     } else {
         return (
             <HomeStyle>
+                <div className="page_title">
+                    <h2>ARTISTES</h2>
+                </div>
                     <div className="artist_card_container">
                         {artists.map((artist, index) => {
                             return (

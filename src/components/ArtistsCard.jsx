@@ -10,8 +10,9 @@ const ArtistsCardStyle = styled.div`
     
     .artist_card_main {
         border-radius: 10px 10px 10px 10px;
-        box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 2px;
+        box-shadow: rgba(161, 103, 103, 0.2) 2px 2px 8px 2px;
         display: inline-block;
+        text-align: center;
         img {
             width: 320px;
             height: 320px;
@@ -26,6 +27,7 @@ const ArtistsCardStyle = styled.div`
         }
         .artist_title {
             font-weight: bold;
+            font-size: 20px;
         }
     }
 `;
