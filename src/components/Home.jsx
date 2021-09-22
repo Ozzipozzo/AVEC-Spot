@@ -41,6 +41,9 @@ const HomeStyle = styled.div`
         width: 84%;
         padding-top: 2rem;
     }
+    h2 {
+        font-size: 50px;
+    }
     
 `;
 export default function Home() {

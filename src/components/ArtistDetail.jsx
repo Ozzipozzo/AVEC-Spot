@@ -29,6 +29,9 @@ const ArtistDetailStyle = styled.div`
         padding-top: 2rem;
     }
 
+    h2 {
+        font-size: 50px;
+    }
 
 `;
 

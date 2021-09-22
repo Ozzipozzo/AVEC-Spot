@@ -15,6 +15,7 @@ const ArtistsCardStyle = styled.div`
         border-radius: 10px 10px 10px 10px;
         box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 2px;
         display: inline-block;
+        text-align: center;
         img {
             width: 320px;
             height: 320px;
